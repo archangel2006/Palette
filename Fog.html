@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fog</title>
+  <style>
+    #your-element-selector {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <div id="your-element-selector"></div>
+
+  <!-- THREE.js from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/build/three.min.js"></script>
+
+  <!-- Vanta Fog from CDN -->
+  <script src="https://cdn.jsdelivr.net/gh/tengbao/vanta@latest/dist/vanta.fog.min.js"></script>
+
+  <script>
+    VANTA.FOG({
+      el: "#your-element-selector",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.0,
+      minWidth: 200.0,
+      baseColor: 0x222222,      // dark gray fog base color (hex RGB)
+      highlightColor: 0xffffff  // light fog highlight color (hex RGB)
+    });
+  </script>
+</body>
+</html>
