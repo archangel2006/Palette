@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clouds</title>
+    <style>
+        #your-element-selector {
+            width: 100vw;       /* full viewport width */
+            height: 100vh;      /* full viewport height */
+            position: fixed;    /* fixed so it stays as background */
+            top: 0;
+            left: 0;
+            z-index: -1;       /* behind other content */
+        }
+    </style>
+</head>
+<body>
+  <div id="your-element-selector"></div>  <!-- This is needed -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/tengbao/vanta@latest/dist/vanta.clouds.min.js"></script>
+  <script src="three.r134.min.js"></script>
+  <script src="vanta.clouds.min.js"></script>
+  <script>
+    VANTA.CLOUDS({
+      el: "#your-element-selector",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00
+    });
+  </script>
+</body>
+</html>
